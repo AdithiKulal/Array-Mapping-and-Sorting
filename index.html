@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Array Mapping and Sorting</title>
+</head>
+
+<body>
+    <h1>Array Mapping and Sorting</h1>
+
+    <button onclick="mapArray()">Map Array</button>
+    <button onclick="ascending()">Sort Ascending</button>
+    <button onclick="descending()">Sort Descending</button>
+
+    <div id="result"></div>
+
+    <script>
+        let numbers = [12, 23, 34, 45, 56, 67, 78, 89, 90];
+        let mappedNumbers = [];
+
+        function mapArray() {
+            mappedNumbers = numbers.map(function (num) {
+                return num * 2;
+            });
+            document.getElementById("result").innerHTML = "Mapped Array: " + mappedNumbers;
+        }
+
+        function ascending() {
+            mappedNumbers.sort(function (a, b) {
+                return a - b;
+            });
+            document.getElementById("result").innerHTML = "Sorted Array (Ascending): " + mappedNumbers;
+        }
+
+        function descending() {
+            mappedNumbers.sort(function (a, b) {
+                return b - a;
+            });
+            document.getElementById("result").innerHTML = "Sorted Array (Descending): " + mappedNumbers;
+        }
+
+    </script>
+</body>
+
+</html>
